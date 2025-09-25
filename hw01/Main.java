@@ -33,7 +33,15 @@ public class Main { // Добавлен класс
         }
 
         if (typeChoice == 1) {
-            int[] intArray = new int[arraySize]
+            //Работа с целочисленным массивом
+            int[] intArray = new int[arraySize];
+            for (int i = 0; i < arraySize; i++) {
+                intArray[i] = (int)(Math.random() * (upperBound - lowerBound) + lowerBound);
+            }
+            System.out.println("\nСгенерированный массив: ");
+            System.out.println(Arrays.toString(intArray));
+
+
             
         }
 
