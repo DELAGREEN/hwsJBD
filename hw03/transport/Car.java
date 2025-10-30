@@ -1,4 +1,4 @@
-package hw03.main.transport;
+package hw03.transport;
 
 public final class Car extends RoadTransport {
     public static final class CarEngine extends Engine {

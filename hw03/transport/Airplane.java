@@ -1,4 +1,4 @@
-package hw03.main.transport;
+package hw03.transport;
 
 public final class Airplane extends AirTransport {
     public static final class AirplaneEngine extends Engine {
