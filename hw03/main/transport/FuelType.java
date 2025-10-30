@@ -1,4 +1,4 @@
-package hw03.main.engine;
+package hw03.main.transport;
 
 public enum FuelType {
     GASOLINE("Бензин"),

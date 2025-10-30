@@ -1,18 +1,14 @@
-package hw03.main.engine;
+package hw03.main.transport;
 
-import hw03.main.transport.Airplane;
-import hw03.main.transport.Car;
-import hw03.main.transport.Motorcycle;
-import hw03.main.transport.Ship;
-
-public sealed class Engine permits Car.Engine, Motorcycle.Engine, Airplane.Engine, Ship.Engine {
+public sealed class Engine 
+    permits Car.CarEngine, Motorcycle.MotorcycleEngine, Airplane.AirplaneEngine, Ship.ShipEngine {
+    
     private final EngineType engineType;
     private final FuelType fuelType;
     private final double power;
     private final int cylinders;
 
     public Engine(EngineType engineType, FuelType fuelType, double power, int cylinders) {
-        
         this.engineType = engineType;
         this.fuelType = fuelType;
         this.power = power;
@@ -36,7 +32,7 @@ public sealed class Engine permits Car.Engine, Motorcycle.Engine, Airplane.Engin
     }
 
     public void start() {
-        System.out.println("Двигатель запущен: " + engineType,getDescription());
+        System.out.println("Двигатель запущен: " + engineType.getDescription());
     }
 
     public void stop() {
@@ -46,9 +42,6 @@ public sealed class Engine permits Car.Engine, Motorcycle.Engine, Airplane.Engin
     @Override
     public String toString() {
         return String.format("Тип: %s, Топливо: %s, Мощность: %.1f л.с., Цилиндры: %d",
-        engineType.getDescription(), fuelType.getDescription(), power, cylinders);
+                engineType.getDescription(), fuelType.getDescription(), power, cylinders);
     }
 }
-
-    
-
