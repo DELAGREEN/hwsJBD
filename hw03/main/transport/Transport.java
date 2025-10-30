@@ -1,12 +1,9 @@
 package hw03.main.transport;
 
-import hw03.main.engine.Engine;
-import hw03.main.engine.FuelType;
-
 public abstract sealed class Transport 
     permits RoadTransport, WaterTransport, AirTransport {
-
-    protected final String model; 
+    
+    protected final String model;
     protected final int year;
     protected final int capacity;
     protected final double maxSpeed;
@@ -17,6 +14,13 @@ public abstract sealed class Transport
         this.capacity = capacity;
         this.maxSpeed = maxSpeed;
     }
+
+    public abstract void start();
+    public abstract void stop();
+    public abstract void displayInfo();
+    public abstract double calculateFuelConsumption(double distance);
+    public abstract Engine getEngine();
+    public abstract FuelType getFuelType();
 
     public String getModel() {
         return model;
@@ -33,5 +37,4 @@ public abstract sealed class Transport
     public double getMaxSpeed() {
         return maxSpeed;
     }
-    
 }
