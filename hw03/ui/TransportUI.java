@@ -1,6 +1,6 @@
-package hw03.main.ui;
+package hw03.ui;
 
-import hw03.main.transport.*;
+import hw03.transport.*;
 
 import java.util.ArrayList;
 import java.util.List;

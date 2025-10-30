@@ -1,4 +1,4 @@
-package hw03.main.transport;
+package hw03.transport;
 
 public sealed class Engine 
     permits Car.CarEngine, Motorcycle.MotorcycleEngine, Airplane.AirplaneEngine, Ship.ShipEngine {

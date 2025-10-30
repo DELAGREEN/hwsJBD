@@ -1,4 +1,4 @@
-package hw03.main.transport;
+package hw03.transport;
 
 public final class Ship extends WaterTransport {
     public static final class ShipEngine extends Engine {
